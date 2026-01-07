@@ -1,55 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
   <title>Aman Darji | Digital Resume</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #f5f7fa;
       margin: 0;
-      padding: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #f4f6f8;
       color: #333;
     }
     .container {
-      max-width: 900px;
-      margin: auto;
-      background: #fff;
-      padding: 30px;
+      max-width: 1000px;
+      margin: 40px auto;
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
     }
     h1 {
-      margin-bottom: 5px;
+      margin: 0;
+      font-size: 34px;
     }
     h2 {
-      border-bottom: 2px solid #eee;
-      padding-bottom: 5px;
-      margin-top: 30px;
+      margin-top: 40px;
+      font-size: 22px;
+      border-bottom: 2px solid #eaeaea;
+      padding-bottom: 8px;
+      color: #222;
+    }
+    .subtitle {
+      font-size: 16px;
+      color: #555;
+      margin-top: 5px;
+    }
+    .contact {
+      margin-top: 15px;
+      font-size: 14px;
+    }
+    .contact a {
+      color: #0066cc;
+      text-decoration: none;
     }
     p {
-      line-height: 1.6;
+      line-height: 1.7;
+      margin-top: 10px;
     }
     ul {
       padding-left: 20px;
+      margin-top: 10px;
     }
-    .contact a {
-      text-decoration: none;
-      color: #0066cc;
+    li {
+      margin-bottom: 8px;
+    }
+    .two-column {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+    .tag {
+      display: inline-block;
+      background: #eef3ff;
+      color: #003366;
+      padding: 6px 10px;
+      margin: 5px 5px 0 0;
+      border-radius: 5px;
+      font-size: 13px;
     }
     .footer {
       text-align: center;
-      margin-top: 40px;
-      font-size: 14px;
+      margin-top: 50px;
+      font-size: 13px;
       color: #777;
     }
-    .btn {
-      display: inline-block;
-      padding: 10px 15px;
-      background: #0066cc;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 5px;
-      margin-top: 10px;
+    @media (max-width: 768px) {
+      .two-column {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -57,47 +85,86 @@
 
 <div class="container">
 
+  <!-- HEADER -->
   <h1>Aman Darji</h1>
-  <p><strong>B.Com Graduate | Operations & Data Validation Professional</strong></p>
+  <div class="subtitle">B.Com Graduate | Operations & Data Validation</div>
 
   <div class="contact">
-    📍 Mumbai, India <br/>
-    📞 <a href="tel:+917021662310">+91 7021662310</a><br/>
-    ✉️ <a href="mailto:amandarji21@gmail.com">amandarji21@gmail.com</a><br/>
-    🔗 <a href="https://www.linkedin.com/in/amandarji" target="_blank">LinkedIn Profile</a>
+    📍 Mumbai, India |
+    📞 +91 7021662310 |
+    ✉️ <a href="mailto:amandarji21@gmail.com">amandarji21@gmail.com</a> |
+    🔗 <a href="https://www.linkedin.com/in/amandarji" target="_blank">LinkedIn</a>
   </div>
 
+  <!-- ABOUT -->
   <h2>About Me</h2>
   <p>
-    Commerce graduate with hands-on experience in data validation, compliance,
-    and documentation. Detail-oriented, reliable, and eager to learn while
-    contributing to smooth business operations.
+    Commerce graduate with practical experience in corporate compliance, data validation,
+    and documentation. Known for accuracy, professionalism, and a strong work ethic.
+    Eager to contribute to efficient business operations while continuously learning
+    and growing in a dynamic work environment.
   </p>
 
+  <!-- EXPERIENCE -->
   <h2>Work Experience</h2>
-  <p><strong>Retail Scan Management Services Pvt. Ltd.</strong><br/>
-  Jr. Data Validation Executive (Oct 2024 – Present)</p>
+
+  <p><strong>Retail Scan Management Services Pvt. Ltd.</strong><br>
+  <em>Jr. Data Validation Executive | Oct 2024 – Present</em></p>
   <ul>
-    <li>Reviewed and validated retail audit data collected by field teams</li>
-    <li>Verified bill images, store locations, and product display details</li>
-    <li>Ensured data accuracy and compliance with client requirements</li>
+    <li>Part of the core team handling key accounts including Tata Consumer Products Ltd (TCPL).</li>
+    <li>Reviewed and organized retail audit data collected by field staff during store visits.</li>
+    <li>Verified bill images, store locations, and product display details.</li>
+    <li>Ensured all data met defined quality standards and client-specific requirements.</li>
   </ul>
 
-  <p><strong>A.R. Gupta & Company</strong><br/>
-  Intern (Nov 2023 – Mar 2024)</p>
+  <p><strong>A.R. Gupta and Company</strong><br>
+  <em>Intern | Nov 2023 – Mar 2024</em></p>
   <ul>
-    <li>Assisted in trademark registrations and company incorporation</li>
-    <li>Handled compliance documentation and annual filings</li>
-    <li>Supported process improvements to reduce delays</li>
+    <li>Successfully registered trademarks for multiple clients.</li>
+    <li>Ensured timely submission of annual filings and assisted in company incorporation.</li>
+    <li>Helped streamline internal processes to reduce delays and improve efficiency.</li>
   </ul>
 
-  <h2>Skills</h2>
-  <ul>
-    <li>Data Validation & Accuracy</li>
-    <li>Compliance & Documentation</li>
-    <li>Process-Oriented Work</li>
-    <li>Time Management</li>
-    <li>Team Collaboration</li>
-  </ul>
+  <!-- TWO COLUMN SECTION -->
+  <div class="two-column">
 
-  <h2>Education</h2>
+    <!-- EDUCATION -->
+    <div>
+      <h2>Education</h2>
+      <ul>
+        <li><strong>Bachelor of Commerce (B.Com)</strong> – Bal Bharati College of Commerce (2024)</li>
+        <li>H.S.C – Bal Bharti Junior College (2021)</li>
+        <li>S.S.C – Lexicon Global School (2019)</li>
+      </ul>
+    </div>
+
+    <!-- SKILLS -->
+    <div>
+      <h2>Key Skills</h2>
+      <span class="tag">Compliance & Documentation</span>
+      <span class="tag">Data Validation</span>
+      <span class="tag">Process Optimization</span>
+      <span class="tag">Problem Solving</span>
+      <span class="tag">Time Management</span>
+      <span class="tag">Strong Work Ethic</span>
+    </div>
+
+  </div>
+
+  <!-- LANGUAGES -->
+  <h2>Languages</h2>
+  <p>English • Hindi • Gujarati • Marathi</p>
+
+  <!-- INTERESTS -->
+  <h2>Interests</h2>
+  <p>Sports • Travelling</p>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    © 2026 Aman Darji | Digital Resume
+  </div>
+
+</div>
+
+</body>
+</html>
