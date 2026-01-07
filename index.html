@@ -1,221 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Aman Darji | Digital Resume</title>
+  <meta charset="UTF-8">
+  <title>Aman Darji | Digital Resume</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Google Font -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-<!-- Icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-<style>
-:root {
-  --bg: #f5f7fb;
-  --card: #ffffff;
-  --text: #222;
-  --accent: #2563eb;
-}
-body.dark {
-  --bg: #0f172a;
-  --card: #1e293b;
-  --text: #e5e7eb;
-}
+  <style>
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
 
-* { box-sizing: border-box; }
-body {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  transition: 0.3s;
-}
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #f4f7fb;
+      color: #222;
+      line-height: 1.7;
+    }
 
-/* HEADER */
-header {
-  position: sticky;
-  top: 0;
-  background: var(--card);
-  padding: 15px 25px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 2px 10px rgba(0,0,0,.08);
-  z-index: 1000;
-}
-header h1 { font-size: 20px; margin: 0; }
-header .btns a, header .btns button {
-  margin-left: 10px;
-  padding: 8px 14px;
-  border-radius: 6px;
-  border: none;
-  cursor: pointer;
-  text-decoration: none;
-  background: var(--accent);
-  color: white;
-  font-size: 14px;
-}
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 40px;
+      border-radius: 14px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+      animation: fadeIn 0.8s ease;
+    }
 
-/* CONTAINER */
-.container {
-  max-width: 900px;
-  margin: 40px auto;
-  background: var(--card);
-  padding: 40px;
-  border-radius: 14px;
-  animation: fadeUp .7s ease;
-}
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
 
-/* SECTIONS */
-section { margin-bottom: 40px; }
-h2 {
-  color: var(--accent);
-  border-bottom: 2px solid #e5e7eb;
-  padding-bottom: 6px;
-}
+    h1 {
+      margin: 0;
+      font-size: 34px;
+      font-weight: 700;
+    }
 
-/* TIMELINE */
-.timeline {
-  border-left: 3px solid var(--accent);
-  padding-left: 25px;
-}
-.timeline-item {
-  margin-bottom: 25px;
-  animation: fadeUp .8s ease;
-}
-.timeline-item h3 { margin: 0; }
+    h2 {
+      margin-top: 40px;
+      font-size: 22px;
+      color: #2563eb;
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 8px;
+    }
 
-/* SKILLS */
-.skills span {
-  display: inline-block;
-  background: #e0e7ff;
-  color: #1e3a8a;
-  padding: 6px 12px;
-  border-radius: 999px;
-  margin: 5px;
-  font-size: 13px;
-}
+    .subtitle {
+      color: #555;
+      margin-top: 6px;
+    }
 
-/* QR */
-.qr {
-  text-align: center;
-}
-.qr img {
-  width: 130px;
-}
+    .contact {
+      margin-top: 12px;
+      font-size: 14px;
+      color: #444;
+    }
 
-/* PRINT */
-@media print {
-  header, .qr { display: none; }
-  body { background: white; }
-}
+    .contact i {
+      margin-right: 6px;
+      color: #2563eb;
+    }
 
-/* MOBILE */
-@media(max-width:600px) {
-  .container { padding: 25px; }
-  header h1 { font-size: 16px; }
-}
-</style>
+    .buttons {
+      margin-top: 18px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      margin-right: 10px;
+      background: #2563eb;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .btn.secondary {
+      background: #0a66c2;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+    }
+
+    p {
+      margin-top: 12px;
+    }
+
+    ul {
+      padding-left: 18px;
+      margin-top: 10px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .experience {
+      border-left: 4px solid #2563eb;
+      padding-left: 20px;
+      margin-top: 25px;
+    }
+
+    .experience h3 {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .experience span {
+      font-size: 14px;
+      color: #555;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .skill {
+      background: #eef2ff;
+      color: #1e40af;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .two-column {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      margin-top: 30px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 14px;
+      color: #777;
+    }
+
+    @media (max-width: 768px) {
+      .two-column {
+        grid-template-columns: 1fr;
+      }
+
+      .container {
+        padding: 25px;
+        margin: 20px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-  <h1>Aman Darji</h1>
-  <div class="btns">
-    <a href="Aman_Darji_Resume_pdf.pdf" target="_blank">
-      <i class="fa-solid fa-download"></i> Resume
-    </a>
-    <a href="https://www.linkedin.com/in/amandarji" target="_blank">
-      <i class="fa-brands fa-linkedin"></i>
-    </a>
-    <button onclick="toggleDark()">
-      <i class="fa-solid fa-moon"></i>
-    </button>
-  </div>
-</header>
-
 <div class="container">
 
-<section>
-  <p><strong>Dahisar (East), Mumbai</strong> • B.Com Graduate</p>
-</section>
+  <!-- HEADER -->
+  <h1>Aman Darji</h1>
+  <div class="subtitle">B.Com Graduate | Operations & Data Validation</div>
 
-<section>
-<h2>Professional Summary</h2>
-<p>
-Commerce graduate with hands-on experience in corporate compliance, ROC filings,
-data validation, and documentation. Detail-oriented professional with strong work ethic
-and process-driven mindset.
-</p>
-</section>
+  <div class="contact">
+    <i class="fas fa-location-dot"></i> Mumbai, India &nbsp; | &nbsp;
+    <i class="fas fa-phone"></i> +91 7021662310 &nbsp; | &nbsp;
+    <i class="fas fa-envelope"></i> amandarji21@gmail.com
+  </div>
 
-<section>
-<h2>Experience</h2>
-<div class="timeline">
+  <div class="buttons">
+    <a class="btn secondary" href="https://www.linkedin.com/in/amandarji" target="_blank">
+      <i class="fab fa-linkedin"></i> LinkedIn
+    </a>
+    <a class="btn" href="Aman_Darji_Resume.pdf" target="_blank">
+      <i class="fas fa-download"></i> Download Resume
+    </a>
+  </div>
 
-<div class="timeline-item">
-<h3>BSP Operations – Executive</h3>
-<p><em>2024 – Present</em></p>
-<ul>
-<li>Managed compliance operations and internal process tracking</li>
-<li>Ensured accuracy in validation and reporting workflows</li>
-</ul>
+  <!-- ABOUT -->
+  <h2>Professional Summary</h2>
+  <p>
+    Commerce graduate with hands-on experience in corporate compliance, data validation,
+    ROC filings, and documentation. Detail-oriented professional with a strong work ethic,
+    process-driven mindset, and commitment to accuracy and efficiency in fast-paced environments.
+  </p>
+
+  <!-- EXPERIENCE -->
+  <h2>Work Experience</h2>
+
+  <div class="experience">
+    <h3>Retail Scan Management Services Pvt. Ltd.</h3>
+    <span>Jr. Data Validation Executive | Oct 2024 – Present</span>
+    <ul>
+      <li>Part of the core team managing key accounts including Tata Consumer Products Ltd (TCPL).</li>
+      <li>Reviewed and validated retail audit data collected from field staff.</li>
+      <li>Verified bill images, store locations, and product display details.</li>
+      <li>Ensured all data met quality standards and client-specific requirements.</li>
+    </ul>
+  </div>
+
+  <div class="experience">
+    <h3>A.R. Gupta and Company</h3>
+    <span>Intern | Nov 2023 – Mar 2024</span>
+    <ul>
+      <li>Successfully registered trademarks for multiple clients.</li>
+      <li>Handled ROC filings, annual compliances, and company incorporation.</li>
+      <li>Improved documentation accuracy and reduced turnaround time.</li>
+      <li>Assisted in compliance verification and internal record maintenance.</li>
+    </ul>
+  </div>
+
+  <!-- SKILLS & EDUCATION -->
+  <div class="two-column">
+
+    <div>
+      <h2>Education</h2>
+      <ul>
+        <li><strong>Bachelor of Commerce (B.Com)</strong> – Bal Bharati College of Commerce (2024)</li>
+        <li><strong>HSC</strong> – Bal Bharti Junior College (2021)</li>
+        <li><strong>SSC</strong> – Lexicon Global School (2019)</li>
+      </ul>
+    </div>
+
+    <div>
+      <h2>Key Skills</h2>
+      <div class="skills">
+        <div class="skill">Compliance & Documentation</div>
+        <div class="skill">Data Validation</div>
+        <div class="skill">ROC Filings</div>
+        <div class="skill">Process Optimization</div>
+        <div class="skill">Problem Solving</div>
+        <div class="skill">Time Management</div>
+        <div class="skill">Attention to Detail</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- LANGUAGES -->
+  <h2>Languages</h2>
+  <p>English • Hindi • Gujarati • Marathi</p>
+
+  <!-- INTERESTS -->
+  <h2>Interests</h2>
+  <p>Sports • Travelling</p>
+
+  <footer>
+    © 2026 Aman Darji • Digital Resume
+  </footer>
+
 </div>
-
-<div class="timeline-item">
-<h3>A.R. Gupta & Company – Intern</h3>
-<p><em>Nov 2023 – Mar 2024</em></p>
-<ul>
-<li>Registered trademarks for multiple clients</li>
-<li>Handled ROC filings and company incorporation</li>
-<li>Improved documentation turnaround time</li>
-</ul>
-</div>
-
-</div>
-</section>
-
-<section>
-<h2>Key Skills</h2>
-<div class="skills">
-<span>Compliance & Documentation</span>
-<span>ROC Filings</span>
-<span>Data Validation</span>
-<span>Process Optimization</span>
-<span>Attention to Detail</span>
-<span>Time Management</span>
-</div>
-</section>
-
-<section>
-<h2>Education</h2>
-<ul>
-<li><strong>B.Com</strong> – Bal Bharati College of Commerce (2024)</li>
-<li><strong>HSC</strong> – Bal Bharti Junior College (2021)</li>
-<li><strong>SSC</strong> – Lexicon Global School (2019)</li>
-</ul>
-</section>
-
-<section class="qr">
-<h2>QR Code</h2>
-<p>Scan to view resume</p>
-<img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://amandarji21-pixel.github.io/">
-</section>
-
-</div>
-
-<script>
-function toggleDark() {
-  document.body.classList.toggle("dark");
-}
-</script>
 
 </body>
 </html>
