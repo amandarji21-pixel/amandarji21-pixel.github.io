@@ -2,103 +2,116 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Aman Darji | Digital Resume</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <!-- Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
-    body {
+    :root {
+      --primary:#2563eb;
+      --bg:#f4f6fb;
+      --text:#1f2937;
+      --card:#ffffff;
+      --border:#e5e7eb;
+    }
+
+    * {
+      box-sizing: border-box;
       margin: 0;
+      padding: 0;
       font-family: 'Inter', sans-serif;
-      background: #f4f7fb;
-      color: #222;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
       line-height: 1.6;
     }
 
     .container {
       max-width: 900px;
       margin: 40px auto;
-      background: #fff;
+      background: var(--card);
       padding: 40px;
-      border-radius: 12px;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+      border-radius: 14px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+      animation: fadeIn 0.6s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     h1 {
       font-size: 32px;
-      margin-bottom: 5px;
-    }
-
-    .subtitle {
-      color: #555;
-      font-size: 15px;
-      margin-bottom: 15px;
-    }
-
-    .buttons {
-      margin-top: 15px;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-right: 10px;
-      padding: 10px 16px;
-      background: #2563eb;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: 600;
-      font-size: 14px;
-      transition: 0.3s;
-    }
-
-    .btn.secondary {
-      background: #0a66c2;
-    }
-
-    .btn:hover {
-      opacity: 0.9;
-      transform: translateY(-1px);
-    }
-
-    hr {
-      margin: 35px 0;
-      border: none;
-      border-top: 1px solid #e5e7eb;
+      font-weight: 700;
     }
 
     h2 {
-      color: #2563eb;
-      font-size: 22px;
+      color: var(--primary);
+      margin-top: 40px;
       margin-bottom: 15px;
+      font-size: 22px;
     }
 
-    .experience-card {
-      border-left: 4px solid #2563eb;
-      padding-left: 16px;
+    p {
+      margin-top: 8px;
+    }
+
+    .sub {
+      color: #6b7280;
+      margin-top: 6px;
+    }
+
+    .actions {
+      margin-top: 20px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--primary);
+      color: #fff;
+      padding: 10px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: transform .2s, box-shadow .2s;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(37,99,235,0.3);
+    }
+
+    hr {
+      margin: 30px 0;
+      border: none;
+      border-top: 1px solid var(--border);
+    }
+
+    .experience {
+      border-left: 4px solid var(--primary);
+      padding-left: 20px;
       margin-bottom: 25px;
     }
 
-    .experience-card h3 {
-      margin: 0;
-      font-size: 18px;
-    }
-
-    .experience-card span {
-      font-size: 14px;
-      color: #555;
-    }
-
     ul {
-      padding-left: 18px;
+      margin-top: 10px;
+      padding-left: 20px;
     }
 
-    ul li {
+    li {
       margin-bottom: 8px;
     }
 
@@ -106,32 +119,29 @@
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
+      margin-top: 10px;
     }
 
     .skill {
       background: #e8efff;
-      color: #2563eb;
+      color: var(--primary);
       padding: 8px 14px;
       border-radius: 20px;
       font-size: 14px;
-      font-weight: 600;
+      font-weight: 500;
     }
 
     footer {
       text-align: center;
-      font-size: 13px;
-      color: #666;
       margin-top: 40px;
+      color: #6b7280;
+      font-size: 14px;
     }
 
-    @media (max-width: 600px) {
+    @media(max-width:600px){
       .container {
-        margin: 20px;
         padding: 25px;
-      }
-
-      h1 {
-        font-size: 26px;
+        margin: 20px;
       }
     }
   </style>
@@ -142,29 +152,25 @@
 
     <!-- HEADER -->
     <h1>Aman Darji</h1>
-    <div class="subtitle">
-      Dahisar (East), Mumbai • B.Com Graduate  
-    </div>
+    <p class="sub">Dahisar (East), Mumbai • B.Com Graduate</p>
 
-    <div class="buttons">
-      <a class="btn secondary" href="https://www.linkedin.com/in/amandarji" target="_blank">
+    <div class="actions">
+      <a class="btn" href="https://www.linkedin.com/in/amandarji" target="_blank">
         <i class="fab fa-linkedin"></i> LinkedIn
       </a>
-
-      <a class="btn" href="Aman_Darji_Resume.pdf" target="_blank">
+      <a class="btn" href="Aman_Darji_Resume_pdf.pdf" target="_blank">
         <i class="fas fa-download"></i> Download Resume
       </a>
     </div>
 
     <hr>
 
-    <!-- OBJECTIVE -->
+    <!-- SUMMARY -->
     <h2>Professional Summary</h2>
     <p>
-      Commerce graduate with hands-on experience in corporate compliance, data validation,
-      ROC filings, and documentation. Detail-oriented professional with a strong work ethic,
-      process-driven mindset, and commitment to accuracy and efficiency in fast-paced
-      environments.
+      Commerce graduate with hands-on experience in corporate compliance, data validation, ROC filings, and documentation.
+      Detail-oriented professional with strong work ethic, process-driven mindset, and commitment to accuracy and efficiency
+      in fast-paced environments.
     </p>
 
     <hr>
@@ -172,13 +178,24 @@
     <!-- EXPERIENCE -->
     <h2>Experience</h2>
 
-    <div class="experience-card">
-      <h3>A.R. Gupta & Company – Intern</h3>
-      <span>November 2023 – March 2024</span>
+    <div class="experience">
+      <strong>Retail Scan Management Services Pvt. Ltd. – Jr. Data Validation Executive</strong><br>
+      <span class="sub">October 2024 – Present</span>
       <ul>
-        <li>Successfully registered trademarks for multiple clients, protecting intellectual property rights.</li>
-        <li>Handled ROC filings, annual compliances, and company incorporation procedures.</li>
-        <li>Improved documentation accuracy and reduced turnaround time through structured processes.</li>
+        <li>Core team member handling key accounts including Tata Consumer Products Ltd (TCPL).</li>
+        <li>Reviewed and organized data collected by field staff during store audits.</li>
+        <li>Validated bill images, store locations, and product display details.</li>
+        <li>Ensured data quality compliance with client-specific standards.</li>
+      </ul>
+    </div>
+
+    <div class="experience">
+      <strong>A.R. Gupta & Company – Intern</strong><br>
+      <span class="sub">November 2023 – March 2024</span>
+      <ul>
+        <li>Registered trademarks for multiple clients, protecting IP rights.</li>
+        <li>Handled ROC filings, annual compliances, and company incorporation.</li>
+        <li>Improved documentation accuracy and reduced turnaround time.</li>
         <li>Assisted in compliance verification and internal record maintenance.</li>
       </ul>
     </div>
@@ -188,13 +205,13 @@
     <!-- SKILLS -->
     <h2>Key Skills</h2>
     <div class="skills">
-      <div class="skill">Compliance & Documentation</div>
-      <div class="skill">Data Validation</div>
-      <div class="skill">ROC Filings</div>
-      <div class="skill">Process Optimization</div>
-      <div class="skill">Problem Solving</div>
-      <div class="skill">Time Management</div>
-      <div class="skill">Attention to Detail</div>
+      <span class="skill">Compliance & Documentation</span>
+      <span class="skill">Data Validation</span>
+      <span class="skill">ROC Filings</span>
+      <span class="skill">Process Optimization</span>
+      <span class="skill">Problem Solving</span>
+      <span class="skill">Time Management</span>
+      <span class="skill">Attention to Detail</span>
     </div>
 
     <hr>
@@ -202,9 +219,9 @@
     <!-- EDUCATION -->
     <h2>Education</h2>
     <ul>
-      <li><strong>B.Com</strong> – Bal Bharati College of Commerce (2024)</li>
-      <li><strong>HSC</strong> – Bal Bharti Junior College (2021)</li>
-      <li><strong>SSC</strong> – Lexicon Global School (2019)</li>
+      <li><strong>Bachelor of Commerce (B.Com)</strong> – Bal Bharati College of Commerce (2024)</li>
+      <li><strong>Higher Secondary Certificate (HSC)</strong> – Bal Bharti Junior College (2021)</li>
+      <li><strong>Secondary School Certificate (SSC)</strong> – Lexicon Global School (2019)</li>
     </ul>
 
     <hr>
