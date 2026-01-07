@@ -1,274 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Aman Darji | Digital Resume</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <title>Aman Darji | Digital Resume</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Google Font -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-<style>
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 
-body {
-  font-family: 'Inter', sans-serif;
-  background: linear-gradient(135deg, #f4f7ff, #eef2ff);
-  color: #1f2937;
-  line-height: 1.6;
-}
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #f4f7fb;
+      color: #222;
+      line-height: 1.6;
+    }
 
-/* Container */
-.container {
-  max-width: 1000px;
-  margin: 40px auto;
-  background: #ffffff;
-  padding: 40px;
-  border-radius: 14px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-  animation: fadeIn 0.8s ease-in;
-}
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    }
 
-@keyframes fadeIn {
-  from {opacity:0; transform: translateY(20px);}
-  to {opacity:1; transform: translateY(0);}
-}
+    h1 {
+      font-size: 32px;
+      margin-bottom: 5px;
+    }
 
-/* Header */
-.header {
-  text-align: center;
-}
+    .subtitle {
+      color: #555;
+      font-size: 15px;
+      margin-bottom: 15px;
+    }
 
-.header h1 {
-  font-size: 36px;
-  color: #1d4ed8;
-}
+    .buttons {
+      margin-top: 15px;
+    }
 
-.subtitle {
-  font-weight: 600;
-  margin-top: 6px;
-}
+    .btn {
+      display: inline-block;
+      margin-right: 10px;
+      padding: 10px 16px;
+      background: #2563eb;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 14px;
+      transition: 0.3s;
+    }
 
-.contact {
-  margin-top: 10px;
-  font-size: 14px;
-}
+    .btn.secondary {
+      background: #0a66c2;
+    }
 
-/* Buttons */
-.buttons {
-  margin-top: 20px;
-}
+    .btn:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
+    }
 
-.btn {
-  display: inline-block;
-  padding: 12px 20px;
-  background: #2563eb;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: 600;
-  margin: 6px;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
+    hr {
+      margin: 35px 0;
+      border: none;
+      border-top: 1px solid #e5e7eb;
+    }
 
-.btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
-}
+    h2 {
+      color: #2563eb;
+      font-size: 22px;
+      margin-bottom: 15px;
+    }
 
-.btn.linkedin {
-  background: #0a66c2;
-}
+    .experience-card {
+      border-left: 4px solid #2563eb;
+      padding-left: 16px;
+      margin-bottom: 25px;
+    }
 
-/* Section */
-section {
-  margin-top: 40px;
-}
+    .experience-card h3 {
+      margin: 0;
+      font-size: 18px;
+    }
 
-h2 {
-  color: #1d4ed8;
-  border-bottom: 2px solid #e5e7eb;
-  padding-bottom: 6px;
-  margin-bottom: 16px;
-}
+    .experience-card span {
+      font-size: 14px;
+      color: #555;
+    }
 
-/* Timeline */
-.timeline {
-  border-left: 4px solid #2563eb;
-  padding-left: 20px;
-}
+    ul {
+      padding-left: 18px;
+    }
 
-.timeline-item {
-  margin-bottom: 20px;
-}
+    ul li {
+      margin-bottom: 8px;
+    }
 
-.timeline-item h3 {
-  font-size: 18px;
-}
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
 
-.timeline-item span {
-  font-size: 14px;
-  color: #6b7280;
-}
+    .skill {
+      background: #e8efff;
+      color: #2563eb;
+      padding: 8px 14px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 600;
+    }
 
-/* Cards */
-.card {
-  background: #f9fafb;
-  padding: 16px;
-  border-radius: 10px;
-  margin-bottom: 14px;
-}
+    footer {
+      text-align: center;
+      font-size: 13px;
+      color: #666;
+      margin-top: 40px;
+    }
 
-/* Skills */
-.tags span {
-  display: inline-block;
-  background: #e0e7ff;
-  color: #1d4ed8;
-  padding: 6px 12px;
-  border-radius: 20px;
-  margin: 5px;
-  font-size: 14px;
-}
+    @media (max-width: 600px) {
+      .container {
+        margin: 20px;
+        padding: 25px;
+      }
 
-/* Contact Form */
-form input, form textarea {
-  width: 100%;
-  padding: 12px;
-  margin-top: 10px;
-  border-radius: 8px;
-  border: 1px solid #d1d5db;
-  font-family: inherit;
-}
-
-form button {
-  margin-top: 12px;
-  padding: 12px 18px;
-  background: #2563eb;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-/* Footer */
-.footer {
-  text-align: center;
-  margin-top: 40px;
-  font-size: 14px;
-  color: #6b7280;
-}
-
-/* Mobile */
-@media (max-width: 600px) {
-  .container {
-    padding: 25px;
-  }
-  .header h1 {
-    font-size: 28px;
-  }
-}
-</style>
+      h1 {
+        font-size: 26px;
+      }
+    }
+  </style>
 </head>
 
 <body>
-<div class="container">
+  <div class="container">
 
-  <!-- HEADER -->
-  <div class="header">
+    <!-- HEADER -->
     <h1>Aman Darji</h1>
-    <p class="subtitle">Commerce Graduate | Compliance & Operations</p>
-    <p class="contact">
-      📍 Mumbai • 📧 amandarji21@gmail.com • 📞 +91 7021662310
-    </p>
+    <div class="subtitle">
+      Dahisar (East), Mumbai • B.Com Graduate  
+    </div>
 
     <div class="buttons">
-      <a href="Aman_Darji_Resume.pdf" target="_blank" class="btn">📄 Download Resume</a>
-      <a href="https://www.linkedin.com/in/amandarji" target="_blank" class="btn linkedin">🔗 LinkedIn</a>
-    </div>
-  </div>
+      <a class="btn secondary" href="https://www.linkedin.com/in/amandarji" target="_blank">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
 
-  <!-- SUMMARY -->
-  <section>
+      <a class="btn" href="Aman_Darji_Resume.pdf" target="_blank">
+        <i class="fas fa-download"></i> Download Resume
+      </a>
+    </div>
+
+    <hr>
+
+    <!-- OBJECTIVE -->
     <h2>Professional Summary</h2>
     <p>
-      Commerce graduate with hands-on experience in corporate compliance, documentation,
-      data validation, and operational processes. Detail-oriented, reliable, and eager
-      to contribute to organizational efficiency.
+      Commerce graduate with hands-on experience in corporate compliance, data validation,
+      ROC filings, and documentation. Detail-oriented professional with a strong work ethic,
+      process-driven mindset, and commitment to accuracy and efficiency in fast-paced
+      environments.
     </p>
-  </section>
 
-  <!-- EXPERIENCE -->
-  <section>
+    <hr>
+
+    <!-- EXPERIENCE -->
     <h2>Experience</h2>
-    <div class="timeline">
-      <div class="timeline-item">
-        <h3>A.R. Gupta & Company – Intern</h3>
-        <span>Nov 2023 – Mar 2024</span>
-        <ul>
-          <li>Registered trademarks for multiple clients</li>
-          <li>Handled ROC filings and company incorporation</li>
-          <li>Improved documentation accuracy and turnaround time</li>
-        </ul>
-      </div>
-    </div>
-  </section>
 
-  <!-- PROJECTS -->
-  <section>
-    <h2>Projects</h2>
-    <div class="card">
-      <h3>Digital Resume Website</h3>
-      <p>
-        Designed and deployed a responsive resume website using HTML & CSS,
-        hosted on GitHub Pages for professional visibility.
-      </p>
+    <div class="experience-card">
+      <h3>A.R. Gupta & Company – Intern</h3>
+      <span>November 2023 – March 2024</span>
+      <ul>
+        <li>Successfully registered trademarks for multiple clients, protecting intellectual property rights.</li>
+        <li>Handled ROC filings, annual compliances, and company incorporation procedures.</li>
+        <li>Improved documentation accuracy and reduced turnaround time through structured processes.</li>
+        <li>Assisted in compliance verification and internal record maintenance.</li>
+      </ul>
     </div>
-  </section>
 
-  <!-- SKILLS -->
-  <section>
+    <hr>
+
+    <!-- SKILLS -->
     <h2>Key Skills</h2>
-    <div class="tags">
-      <span>Compliance</span>
-      <span>Documentation</span>
-      <span>Data Validation</span>
-      <span>Process Optimization</span>
-      <span>Problem Solving</span>
-      <span>Time Management</span>
+    <div class="skills">
+      <div class="skill">Compliance & Documentation</div>
+      <div class="skill">Data Validation</div>
+      <div class="skill">ROC Filings</div>
+      <div class="skill">Process Optimization</div>
+      <div class="skill">Problem Solving</div>
+      <div class="skill">Time Management</div>
+      <div class="skill">Attention to Detail</div>
     </div>
-  </section>
 
-  <!-- EDUCATION -->
-  <section>
+    <hr>
+
+    <!-- EDUCATION -->
     <h2>Education</h2>
     <ul>
       <li><strong>B.Com</strong> – Bal Bharati College of Commerce (2024)</li>
-      <li>HSC – Bal Bharti Junior College (2021)</li>
-      <li>SSC – Lexicon Global School (2019)</li>
+      <li><strong>HSC</strong> – Bal Bharti Junior College (2021)</li>
+      <li><strong>SSC</strong> – Lexicon Global School (2019)</li>
     </ul>
-  </section>
 
-  <!-- CONTACT -->
-  <section>
-    <h2>Contact Me</h2>
-    <form action="mailto:amandarji21@gmail.com" method="post" enctype="text/plain">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" rows="4" placeholder="Your Message"></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
+    <hr>
 
-  <!-- FOOTER -->
-  <div class="footer">
-    © 2026 Aman Darji | Digital Resume
+    <!-- LANGUAGES -->
+    <h2>Languages</h2>
+    <p>English • Hindi • Gujarati • Marathi</p>
+
+    <footer>
+      © 2026 Aman Darji • Digital Resume
+    </footer>
+
   </div>
-
-</div>
 </body>
 </html>
