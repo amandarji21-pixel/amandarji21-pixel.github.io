@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Aman Darji | Digital Resume</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Font Awesome Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+
   <style>
     body {
       margin: 0;
@@ -11,69 +18,133 @@
       background: #f4f6f8;
       color: #333;
     }
+
     .container {
       max-width: 1000px;
       margin: 40px auto;
       background: #ffffff;
       padding: 40px;
-      border-radius: 10px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      border-radius: 12px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
     }
+
     h1 {
       margin: 0;
-      font-size: 34px;
+      font-size: 36px;
+      color: #1f2937;
     }
+
     h2 {
-      margin-top: 40px;
+      margin-top: 30px;
       font-size: 22px;
-      border-bottom: 2px solid #eaeaea;
-      padding-bottom: 8px;
-      color: #222;
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 6px;
+      color: #111827;
     }
-    .subtitle {
-      font-size: 16px;
-      color: #555;
-      margin-top: 5px;
+
+    h3 {
+      margin-bottom: 5px;
+      font-size: 17px;
+      color: #1f2937;
     }
-    .contact {
-      margin-top: 15px;
-      font-size: 14px;
-    }
-    .contact a {
-      color: #0066cc;
-      text-decoration: none;
-    }
+
     p {
       line-height: 1.7;
-      margin-top: 10px;
+      margin-top: 8px;
     }
+
     ul {
       padding-left: 20px;
-      margin-top: 10px;
     }
+
     li {
       margin-bottom: 8px;
     }
+
+    /* Header */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .contact {
+      font-size: 14px;
+    }
+
+    .contact i {
+      margin-right: 8px;
+      color: #2563eb;
+    }
+
+    .contact a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    /* Buttons */
+    .action-buttons {
+      margin-top: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 18px;
+      margin-right: 10px;
+      border-radius: 6px;
+      font-weight: 600;
+      text-decoration: none;
+      color: #fff;
+      font-size: 14px;
+    }
+
+    .btn i {
+      margin-right: 8px;
+    }
+
+    .btn-linkedin {
+      background: #0a66c2;
+    }
+
+    .btn-linkedin:hover {
+      background: #084b8a;
+    }
+
+    .btn-download {
+      background: #2563eb;
+    }
+
+    .btn-download:hover {
+      background: #1e40af;
+    }
+
+    /* Two Column */
     .two-column {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 40px;
     }
+
     .tag {
       display: inline-block;
-      background: #eef3ff;
-      color: #003366;
+      background: #e0e7ff;
+      color: #1e3a8a;
       padding: 6px 10px;
-      margin: 5px 5px 0 0;
-      border-radius: 5px;
+      margin: 6px 6px 0 0;
+      border-radius: 20px;
       font-size: 13px;
+      font-weight: 500;
     }
+
+    /* Footer */
     .footer {
       text-align: center;
-      margin-top: 50px;
+      margin-top: 40px;
       font-size: 13px;
-      color: #777;
+      color: #6b7280;
     }
+
     @media (max-width: 768px) {
       .two-column {
         grid-template-columns: 1fr;
@@ -81,90 +152,103 @@
     }
   </style>
 </head>
+
 <body>
+  <div class="container">
 
-<div class="container">
+    <!-- HEADER -->
+    <div class="header">
+      <div>
+        <h1>Aman Darji</h1>
+        <p><strong>B.Com Graduate | Operations & Compliance</strong></p>
 
-  <!-- HEADER -->
-  <h1>Aman Darji</h1>
-  <div class="subtitle">B.Com Graduate | Operations & Data Validation</div>
+        <div class="action-buttons">
+          <a
+            class="btn btn-linkedin"
+            href="https://www.linkedin.com/in/amandarji"
+            target="_blank"
+          >
+            <i class="fa-brands fa-linkedin"></i> LinkedIn
+          </a>
 
-  <div class="contact">
-    📍 Mumbai, India |
-    📞 +91 7021662310 |
-    ✉️ <a href="mailto:amandarji21@gmail.com">amandarji21@gmail.com</a> |
-    🔗 <a href="https://www.linkedin.com/in/amandarji" target="_blank">LinkedIn</a>
-  </div>
+          <a
+            class="btn btn-download"
+            href="Aman_Darji_Resume.pdf"
+            target="_blank"
+          >
+            <i class="fa-solid fa-download"></i> Download Resume
+          </a>
+        </div>
+      </div>
 
-  <!-- ABOUT -->
-  <h2>About Me</h2>
-  <p>
-    Commerce graduate with practical experience in corporate compliance, data validation,
-    and documentation. Known for accuracy, professionalism, and a strong work ethic.
-    Eager to contribute to efficient business operations while continuously learning
-    and growing in a dynamic work environment.
-  </p>
-
-  <!-- EXPERIENCE -->
-  <h2>Work Experience</h2>
-
-  <p><strong>Retail Scan Management Services Pvt. Ltd.</strong><br>
-  <em>Jr. Data Validation Executive | Oct 2024 – Present</em></p>
-  <ul>
-    <li>Part of the core team handling key accounts including Tata Consumer Products Ltd (TCPL).</li>
-    <li>Reviewed and organized retail audit data collected by field staff during store visits.</li>
-    <li>Verified bill images, store locations, and product display details.</li>
-    <li>Ensured all data met defined quality standards and client-specific requirements.</li>
-  </ul>
-
-  <p><strong>A.R. Gupta and Company</strong><br>
-  <em>Intern | Nov 2023 – Mar 2024</em></p>
-  <ul>
-    <li>Successfully registered trademarks for multiple clients.</li>
-    <li>Ensured timely submission of annual filings and assisted in company incorporation.</li>
-    <li>Helped streamline internal processes to reduce delays and improve efficiency.</li>
-  </ul>
-
-  <!-- TWO COLUMN SECTION -->
-  <div class="two-column">
-
-    <!-- EDUCATION -->
-    <div>
-      <h2>Education</h2>
-      <ul>
-        <li><strong>Bachelor of Commerce (B.Com)</strong> – Bal Bharati College of Commerce (2024)</li>
-        <li>H.S.C – Bal Bharti Junior College (2021)</li>
-        <li>S.S.C – Lexicon Global School (2019)</li>
-      </ul>
+      <div class="contact">
+        <p><i class="fa-solid fa-location-dot"></i> Mumbai, India</p>
+        <p><i class="fa-solid fa-phone"></i> +91 7021662310</p>
+        <p>
+          <i class="fa-solid fa-envelope"></i>
+          <a href="mailto:amandarji21@gmail.com">amandarji21@gmail.com</a>
+        </p>
+      </div>
     </div>
 
-    <!-- SKILLS -->
-    <div>
-      <h2>Key Skills</h2>
-      <span class="tag">Compliance & Documentation</span>
-      <span class="tag">Data Validation</span>
-      <span class="tag">Process Optimization</span>
-      <span class="tag">Problem Solving</span>
-      <span class="tag">Time Management</span>
-      <span class="tag">Strong Work Ethic</span>
+    <!-- OBJECTIVE -->
+    <h2>Career Objective</h2>
+    <p>
+      Commerce graduate with hands-on experience in compliance, documentation,
+      and data validation. Eager to contribute to operational excellence through
+      accuracy, professionalism, and a strong work ethic in a growth-oriented
+      organization.
+    </p>
+
+    <!-- EXPERIENCE -->
+    <h2>Experience</h2>
+    <h3>A.R. Gupta and Company – Intern</h3>
+    <p><em>Nov 2023 – Mar 2024</em></p>
+    <ul>
+      <li>Registered trademarks for multiple clients.</li>
+      <li>Handled annual filings and incorporation documentation.</li>
+      <li>Improved internal processes to enhance efficiency.</li>
+    </ul>
+
+    <!-- TWO COLUMN SECTION -->
+    <div class="two-column">
+
+      <!-- EDUCATION -->
+      <div>
+        <h2>Education</h2>
+        <ul>
+          <li><strong>B.Com</strong> – Bal Bharati College of Commerce (2024)</li>
+          <li>HSC – Bal Bharati Junior College (2021)</li>
+          <li>SSC – Lexicon Global School (2019)</li>
+        </ul>
+      </div>
+
+      <!-- SKILLS -->
+      <div>
+        <h2>Key Skills</h2>
+        <span class="tag">Compliance & Documentation</span>
+        <span class="tag">Data Validation</span>
+        <span class="tag">Process Optimization</span>
+        <span class="tag">Problem Solving</span>
+        <span class="tag">Time Management</span>
+        <span class="tag">Strong Work Ethic</span>
+      </div>
+
+    </div>
+
+    <!-- LANGUAGES -->
+    <h2>Languages</h2>
+    <p>English • Hindi • Gujarati • Marathi</p>
+
+    <!-- INTERESTS -->
+    <h2>Interests</h2>
+    <p>Sports • Travelling</p>
+
+    <!-- FOOTER -->
+    <div class="footer">
+      © 2026 Aman Darji | Digital Resume
     </div>
 
   </div>
-
-  <!-- LANGUAGES -->
-  <h2>Languages</h2>
-  <p>English • Hindi • Gujarati • Marathi</p>
-
-  <!-- INTERESTS -->
-  <h2>Interests</h2>
-  <p>Sports • Travelling</p>
-
-  <!-- FOOTER -->
-  <div class="footer">
-    © 2026 Aman Darji | Digital Resume
-  </div>
-
-</div>
-
 </body>
 </html>
